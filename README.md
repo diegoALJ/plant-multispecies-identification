@@ -1,4 +1,4 @@
-# PlantCLEF2026 - Multi-Species Plant Identification
+# PlantCLEF2026 - Multi-Species Plant Identification 🌿
 
 This repository contains my working pipeline for the [PlantCLEF2026 @ LifeCLEF & CVPR-FGVC Kaggle competition](https://www.kaggle.com/competitions/plantclef-2026).
 
@@ -75,9 +75,11 @@ The actual Kaggle work was organized around three notebooks:
 
 The notebooks are not included in this package. They can be added later inside the `notebooks/` folder.
 
-## Organizers
+## Organizers and Citation
 
 This competition is part of LifeCLEF 2026 and the FGVC13 workshop at CVPR 2026. The challenge is hosted on Kaggle as PlantCLEF2026.
+
+Giulio Martellucci, Ilyass Moummad, Hervé Goëau, Pierre Bonnet, Fabrice Vinatier, and Alexis Joly. PlantCLEF2026 @ LifeCLEF & CVPR-FGVC. https://www.kaggle.com/competitions/plantclef-2026, 2026. Kaggle.
 
 ## Disclaimer
 
