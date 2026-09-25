@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Kaggle / local data
+input/
+data/
+outputs/*
+!outputs/.gitkeep
+submissions/*
+!submissions/.gitkeep
+*.npy
+*.npz
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.tar
+*.zip
+*.7z
+*.jpg
+*.jpeg
+*.png
+*.tif
+*.tiff
+*.webp
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/

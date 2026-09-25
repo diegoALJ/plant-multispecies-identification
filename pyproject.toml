@@ -1,0 +1,8 @@
+[project]
+name = "plantclef2026-pipeline"
+version = "0.1.0"
+description = "Lightweight Kaggle pipeline utilities for PlantCLEF2026"
+requires-python = ">=3.10"
+
+[tool.setuptools]
+packages = ["src"]

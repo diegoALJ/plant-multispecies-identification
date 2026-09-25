@@ -1,0 +1,42 @@
+seed: 42
+
+paths:
+  test_meta_path: /kaggle/input/datasets/damontoyat/plantclef-test/PlantCLEF2025_test.csv
+  species_path: /kaggle/input/datasets/damontoyat/plantclef-species-id/species_ids.csv
+  test_images_dir: /kaggle/input/datasets/damontoyat/plantclef-test-images/PlantCLEF2025_test_images
+  output_dir: /kaggle/working/to_keep
+
+model:
+  timm_model_name: vit_base_patch14_reg4_dinov2.lvd142m
+  num_classes: 7806
+  image_size: 518
+  activation: softmax
+  model_search_root: /kaggle/input
+  checkpoint_keyword: dinov2_patch14_reg4_onlyclassifier_then_all
+
+tiling:
+  grid_size: 5
+  include_full_image: true
+  border_crop_pct: 0.05
+  compute_vegetation_score: true
+
+inference:
+  batch_size: 16
+  num_workers: 2
+  use_amp: true
+
+aggregation:
+  method: max_mean_blend
+  max_weight: 0.70
+  mean_weight: 0.30
+
+submissions:
+  - name: top5_thr003
+    topk: 5
+    threshold: 0.03
+  - name: top8_thr003
+    topk: 8
+    threshold: 0.03
+  - name: top10_thr003
+    topk: 10
+    threshold: 0.03

@@ -1,0 +1,40 @@
+seed: 42
+
+paths:
+  model1_to_keep_dir: /kaggle/input/datasets/damontoyat/plantclef-tokeep/to keep
+  model2_to_keep_dir: /kaggle/input/CHANGE_THIS_WHEN_MODEL2_EXISTS/to_keep_model2
+  output_dir: /kaggle/working/postprocessing_to_keep
+
+score_blends:
+  - name: original_saved_image_scores
+    use_saved_image_scores: true
+  - name: blend_max050_mean050
+    max_weight: 0.50
+    mean_weight: 0.50
+  - name: blend_max040_mean060
+    max_weight: 0.40
+    mean_weight: 0.60
+
+fixed_submissions:
+  - name: top3_thr000
+    topk: 3
+    threshold: 0.00
+  - name: top4_thr000
+    topk: 4
+    threshold: 0.00
+  - name: top5_thr003
+    topk: 5
+    threshold: 0.03
+  - name: top5_thr004
+    topk: 5
+    threshold: 0.04
+
+ensemble:
+  enabled: false
+  weights:
+    - name: ens_m1_070_m2_030
+      w1: 0.70
+      w2: 0.30
+    - name: ens_m1_050_m2_050
+      w1: 0.50
+      w2: 0.50
